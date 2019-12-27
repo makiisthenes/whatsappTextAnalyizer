@@ -39,25 +39,24 @@ And then send to an email and obtain the txt file that can be analyised.
 <h4>Exporting Chats using iOS Whatsapp:</h4>
 <a href='https://www.imyfone.com/ios-data-recovery/export-whatsapp-chat-from-iphone/' target='_blank'>[External Link To Guide]</a><br>
 <hr>
-
-  <h4>Main.py Usuage</h4>
-  To use, all you have to do is install dependancies found in requirements.txt<br>
-  Use "pip install -r requirements.txt" to install dependancies.<br>
-  Now from command line,<br>
-  CD to directory where <b>whatsappTextAnalyizer is stored<br>
-  usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
-  and type python main.py FILE_PATH_TO_EXPORT.<br>
-  This will output an analysis statment...<br>
-  <hr>
-  <h4>Errors</h4>
-  If an error has occured its probably to do with the PATH_TO_FILE.<br>
-  Make sure that you have copied the whole complete directory path to the export file.<br>
-  <hr>
-  <h4>Contact Me and donations</h4>
-  To contact me,<br>
-  email = '40126030@uxbridge.ac.uk'<br>
-  
-  bitcoin_Address = ''<br>
+<h3>Main.py Usuage</h4>
+To use, all you have to do is install dependancies found in requirements.txt<br>
+Use "pip install -r requirements.txt" to install dependancies.<br>
+Now from command line,<br>
+CD to directory where <b>whatsappTextAnalyizer is stored<br>
+usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
+and type python main.py FILE_PATH_TO_EXPORT.<br>
+This will output an analysis statment...<br>
+<hr>
+<h4>Errors</h4>
+If an error has occured its probably to do with the PATH_TO_FILE.<br>
+Make sure that you have copied the whole complete directory path to the export file.<br>
+<hr>
+<h4>Contact Me and donations</h4>
+To contact me,<br>
+40126030@uxbridge.ac.uk<br> 
+<br>
 // Thanks and enjoy :) <br>
+ Made by Michael Peres.
   
 
