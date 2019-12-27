@@ -31,7 +31,7 @@ There are currently two different versions of Whatsapp running. iOS and Andriod.
 And then send to an email and obtain the txt file that can be analyised.
 <hr>
 <h4>Exporting Chats using iOS Whatsapp:</h4>
-<a href='https://www.imyfone.com/ios-data-recovery/export-whatsapp-chat-from-iphone/'>[External Link To Guide]</a><br>
+<a href='https://www.imyfone.com/ios-data-recovery/export-whatsapp-chat-from-iphone/' target='_blank'>[External Link To Guide]</a><br>
 <hr>
 
   <h4>Main.py Usuage</h4>
