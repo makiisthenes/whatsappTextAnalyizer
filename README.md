@@ -30,7 +30,8 @@ There are currently two different versions of Whatsapp running. iOS and Andriod.
 <img src='https://raw.githubusercontent.com/makiisthenes/whatsappTextAnalyizer/master/export_pics/Screenshot_20191227-142121_WhatsApp.jpg'>
 And then send to an email and obtain the txt file that can be analyised.
 <hr>
-<h4>Exporting Chats using iOS Whatsapp:[not supported yet]</h4>
+<h4>Exporting Chats using iOS Whatsapp:</h4>
+[not supported yet]
 <hr>
 
   <h4>Main.py Usuage</h4>
