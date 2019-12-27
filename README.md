@@ -18,9 +18,11 @@ In order to use for the first time, script requires some parameters...<br>
 --> Obtaining the text data for whatsapp chat...<br>
 To obtain the whatsapp text file, you must access this on the mobile application.<br>
 There are currently two different versions of Whatsapp running. iOS and Andriod.
+<hr>
 <h4>Exporting Chats using Andriod Whatsapp:</h4>
 <i> 1) First go on desired chat you want to be analyised and tap the 3 dots.</i>
 <img src='https://raw.githubusercontent.com/makiisthenes/whatsappTextAnalyizer/master/export_pics/Screenshot_20191227-142052_WhatsApp.jpg'>
+<hr>
 <h4>Exporting Chats using iOS Whatsapp:</h4>
 <hr>
 --> Person A and Person B tags found in txt file...<br>
