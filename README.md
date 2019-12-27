@@ -24,7 +24,8 @@ There are currently two different versions of Whatsapp running. iOS and Andriod.
 <img src='https://raw.githubusercontent.com/makiisthenes/whatsappTextAnalyizer/master/export_pics/Screenshot_20191227-142052_WhatsApp.jpg' width='400px'>
 <i> 2) Then press on 'More >'...</i>
 <img src='https://raw.githubusercontent.com/makiisthenes/whatsappTextAnalyizer/master/export_pics/Screenshot_20191227-142058_WhatsApp.jpg'>
-<i></i>
+<i> 3) Then press on 'Export Chat'...</i>
+<img src='https://raw.githubusercontent.com/makiisthenes/whatsappTextAnalyizer/master/export_pics/Screenshot_20191227-142101_WhatsApp.jpg'>
 <hr>
 <h4>Exporting Chats using iOS Whatsapp:</h4>
 <hr>
