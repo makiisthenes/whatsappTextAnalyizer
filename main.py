@@ -45,12 +45,14 @@ def get_users():
 					# print('part count' + str(part_count))
 					if erafer == 3:
 						if part not in users:
-							users.append(part)
-					# print(part)
+							if part != 'Messages':
+								users.append(part)
 					erafer = erafer + 1
+					# print(part)
 	usera = users[0]
 	userb = users[1]
-
+	print(usera)
+	print(userb)
 
 def emoji_counter():
 	pass
@@ -122,13 +124,13 @@ def analyize_txt(textfile):
 						if date not in unqiue_count:
 							unqiue_count.append(date)
 							line_part_count = 0
-							print('These messages were sent on ' + date + ':')
+							# print('These messages were sent on ' + date + ':')
 						# this will find the unqiue date stamp for this information...
 					# print('part count '+ str(line_part_count))
 					if part_count == 1:
 						msg_time = part
-						print('This message was sent at ' + msg_time) # want to add time difference before each message...
-						print('	--> '+ line)
+						# print('This message was sent at ' + msg_time) # want to add time difference before each message...
+						# print('	--> '+ line)
 						# print(str(line_part_count) + ' ' + str(line))
 					if userb in part:
 						x = x + 1
@@ -203,6 +205,7 @@ def analyize_txt(textfile):
 	print("--> No of days of data used:: " + str(len(unqiue_count))+' days.')
 	print('--> Number of times '+userb_name+' has initiated: '+ str(init_x) + ' time(s).')
 	print('--> Number of times '+usera_name+' has initiated: ' + str(init_y) + ' time(s).')
+	print('--> The users in this conversation is ' + usera_name + ' and ' + userb_name+ '.')
 	print('''
 	''')
 	print('''
@@ -249,5 +252,3 @@ while usr_input != 1 and not hasCompleted:
 				print('Path was not found, please try again...')
 	except OSError:
 		print('Path was not found, please try again...')
-
-
