@@ -32,6 +32,7 @@ And then send to an email and obtain the txt file that can be analyised.
 <hr>
 <h4>Exporting Chats using iOS Whatsapp:[not supported yet]</h4>
 <hr>
+<h4>Parameters for setup.py </h4>
 --> Person A and Person B tags found in txt file...<br>
   These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
   or manually set the variables...,<br>
