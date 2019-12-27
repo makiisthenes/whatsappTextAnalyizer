@@ -15,7 +15,7 @@
 <h3>Setup</h3>
 In order to use for the first time, script requires some parameters...<br>
 --> Obtaining the text data for whatsapp chat...<br>
-To obtain the whatsapp text file, you must access this on the mobile application.
+To obtain the whatsapp text file, you must access this on the mobile application.<br>
 --> Person A and Person B tags found in txt file...<br>
 These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
 or manually set the variables...,<br>
