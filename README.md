@@ -18,8 +18,9 @@ In order to use for the first time, script requires some parameters...<br>
 --> Obtaining the text data for whatsapp chat...<br>
 To obtain the whatsapp text file, you must access this on the mobile application.<br>
 There are currently two different versions of Whatsapp running. iOS and Andriod.
-<h4>Exporting Chats using Andriod Whatsapp</h4>
-<h4>Exporting Chats using iOS Whatsapp</h4>
+<h4>Exporting Chats using Andriod Whatsapp:</h4>
+
+<h4>Exporting Chats using iOS Whatsapp:</h4>
 <hr>
 --> Person A and Person B tags found in txt file...<br>
   These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
