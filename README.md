@@ -32,32 +32,25 @@ And then send to an email and obtain the txt file that can be analyised.
 <hr>
 <h4>Exporting Chats using iOS Whatsapp:[not supported yet]</h4>
 <hr>
-<h4>Parameters for setup.py </h4>
---> Person A and Person B tags found in txt file...<br>
-  These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
-  or manually set the variables...,<br>
-  <b>1)<b/> By going to directory where <b>whatsappTextAnalyizer</b> is stored<br>
-  usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
-  and type python setup.py <FILE_PATH_TO_EXPORT>.
-  <hr>
+
   <h4>Main.py Usuage</h4>
   To use, all you have to do is install dependancies found in requirements.txt<br>
-  Use " pip install -r requirements.txt to install dependancies.<br>
+  Use "pip install -r requirements.txt" to install dependancies.<br>
   Now from command line,<br>
   CD to directory where <b>whatsappTextAnalyizer is stored<br>
   usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
-  and type python main.py <FILE_PATH_TO_EXPORT>.
-  This will output an analysis statment...
+  and type python main.py FILE_PATH_TO_EXPORT.<br>
+  This will output an analysis statment...<br>
   <hr>
   <h4>Errors</h4>
-  If an error has occured its probably to do with the PATH_TO_FILE..
-  Make sure that you have copied the whole complete directory path to the export file...
+  If an error has occured its probably to do with the PATH_TO_FILE.<br>
+  Make sure that you have copied the whole complete directory path to the export file.<br>
   <hr>
   <h4>Contact Me and donations</h4>
-  To contact me, 
-  email = '40126030@uxbridge.ac.uk'
+  To contact me,<br>
+  email = '40126030@uxbridge.ac.uk'<br>
   
-  bitcoin_Address = ''
-// Thanks and enjoy :) 
+  bitcoin_Address = ''<br>
+// Thanks and enjoy :) <br>
   
 
