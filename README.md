@@ -10,6 +10,9 @@
     <li> Of these messages, the percentage of actual texts and images/stickers.</li>
     <li> The amount of emojis used by each person.</li>
     <li> The amount of times, user has initiated a conversation first.</li>
+    </ul>
+    <b>Currently still in deveopment</b>
+    <ul>
     <li> [still in develpment] The type of emoji specifically and how many times.</li>
     <li> [still in develpment] The ability to save analysis.log in directory.</li>
     <li> [still in develpment] The time between messages send and averages, mean and standard devations data</li>
