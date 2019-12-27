@@ -16,12 +16,16 @@ def check_connection():
 
 
 proc = subprocess.Popen('cmd.exe', stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+# Given that you are using wifi connection this will work, with your using wlan0 you may have to refactor code.
+
 def enable():
 	os.system('ipconfig /renew WiFi')
 
+	
 def disable():
 	os.system('ipconfig /release WiFi')
 
+	
 while True:
 	sleep(0.5)
 	usr = input('Type in D for disable, C for checking status and E for enabling wifi connection::').upper()
@@ -33,3 +37,6 @@ while True:
 		check_connection()
 	else:
 		print('Input was not recognised, please try again...')
+
+# Made by Michael Peres		
+		
