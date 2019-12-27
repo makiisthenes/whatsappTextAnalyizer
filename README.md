@@ -39,7 +39,7 @@ And then send to an email and obtain the txt file that can be analyised.
 <h4>Exporting Chats using iOS Whatsapp:</h4>
 <a href='https://www.imyfone.com/ios-data-recovery/export-whatsapp-chat-from-iphone/' target='_blank'>[External Link To Guide]</a><br>
 <hr>
-<h3>Main.py Usuage</h4>
+<h3>main.py Usage</h4>
 To use, all you have to do is install dependancies found in requirements.txt<br>
 Use "pip install -r requirements.txt" to install dependancies.<br>
 Now from command line,<br>
