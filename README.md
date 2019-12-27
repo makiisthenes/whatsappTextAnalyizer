@@ -41,6 +41,23 @@ And then send to an email and obtain the txt file that can be analyised.
   and type python setup.py <FILE_PATH_TO_EXPORT>.
   <hr>
   <h4>Main.py Usuage</h4>
-  To use, all you have to do is install dependancies found in requirements.txt
+  To use, all you have to do is install dependancies found in requirements.txt<br>
+  Use " pip install -r requirements.txt to install dependancies.<br>
+  Now from command line,<br>
+  CD to directory where <b>whatsappTextAnalyizer is stored<br>
+  usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
+  and type python main.py <FILE_PATH_TO_EXPORT>.
+  This will output an analysis statment...
+  <hr>
+  <h4>Errors</h4>
+  If an error has occured its probably to do with the PATH_TO_FILE..
+  Make sure that you have copied the whole complete directory path to the export file...
+  <hr>
+  <h4>Contact Me and donations</h4>
+  To contact me, 
+  email = '40126030@uxbridge.ac.uk'
+  
+  bitcoin_Address = ''
+// Thanks and enjoy :) 
   
 
