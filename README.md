@@ -39,4 +39,8 @@ And then send to an email and obtain the txt file that can be analyised.
   <b>1)<b/> By going to directory where <b>whatsappTextAnalyizer</b> is stored<br>
   usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
   and type python setup.py <FILE_PATH_TO_EXPORT>.
+  <hr>
+  <h4>Main.py Usuage</h4>
+  To use, all you have to do is install dependancies found in requirements.txt
+  
 
