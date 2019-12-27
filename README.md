@@ -18,4 +18,5 @@ These include person A and person B tags, to obtain them you can either use <b>s
 or manually set the variables...,<br>
 <b>1)<b/> By going to directory where <b>whatsappTextAnalyizer</b> is stored<br>
 usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
+and type python setup.py <FILE_PATH_TO_EXPORT>.
 
