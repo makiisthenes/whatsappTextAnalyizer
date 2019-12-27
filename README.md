@@ -3,7 +3,7 @@
 </center>
 <br>
 <em>This python script will be able to take texts and analyise these things::</em>
-  <br>Between person A and B, will be able to:
+  <br><b>Between person A and B, will be able to:</b>
     <ul>
     <li> Find out how many messages where sent by person A and B;</li>
     <li> Of these messages, the percentage of actual texts and images/stickers.</li>
