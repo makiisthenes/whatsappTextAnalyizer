@@ -3,7 +3,7 @@
 </center>
 <br>
 <em>This python script will be able to take texts and analyise these things::</em>
-
+<hr>
   <br><b>Between person A and B, will be able to:</b>
     <ul>
     <li> Find out how many messages where sent by person A and B;</li>
