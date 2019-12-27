@@ -12,4 +12,7 @@
     <li> [still in develpment] The type of emoji specifically and how many times.</li>
     <li> The amount of times, user has initiated a conversation first.</li>
     </ul>
-<h3>Setup For Analysis.</h3>
+<h3>Setup</h3>
+In order to use for the first time, script requires some parameters...<br>
+These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
+or manually set the variables...,<br>
