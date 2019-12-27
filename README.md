@@ -19,9 +19,9 @@ In order to use for the first time, script requires some parameters...<br>
 To obtain the whatsapp text file, you must access this on the mobile application.<br>
 <hr>
 --> Person A and Person B tags found in txt file...<br>
-These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
-or manually set the variables...,<br>
-<b>1)<b/> By going to directory where <b>whatsappTextAnalyizer</b> is stored<br>
-usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
-and type python setup.py <FILE_PATH_TO_EXPORT>.
+  These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
+  or manually set the variables...,<br>
+  <b>1)<b/> By going to directory where <b>whatsappTextAnalyizer</b> is stored<br>
+  usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
+  and type python setup.py <FILE_PATH_TO_EXPORT>.
 
