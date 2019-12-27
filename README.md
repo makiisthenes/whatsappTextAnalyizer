@@ -16,3 +16,6 @@
 In order to use for the first time, script requires some parameters...<br>
 These include person A and person B tags, to obtain them you can either use <b>setup.py</b><br>
 or manually set the variables...,<br>
+<b>1)<b/> By going to directory where <b>whatsappTextAnalyizer</b> is stored<br>
+usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
+
