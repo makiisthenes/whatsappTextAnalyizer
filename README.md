@@ -4,9 +4,10 @@
 <br>
 This python script will be able to take texts and analyise these things::
   Between person A and B, will be able to:
-    - Find out how many messages where sent by person A and B;
-    - Of these messages, the percentage of actual texts and images/stickers.
-    - The amount of emojis used by each person.
-    - [still in develpment] The type of emoji specifically and how many times.
-    - The amount of times, user has initiated a conversation first.
-
+    <ul>
+    <li>- Find out how many messages where sent by person A and B;</li>
+    <li>- Of these messages, the percentage of actual texts and images/stickers.</li>
+    <li>- The amount of emojis used by each person.</li>
+    <li>- [still in develpment] The type of emoji specifically and how many times.</li>
+    <li>- The amount of times, user has initiated a conversation first.</li>
+    </ul>
