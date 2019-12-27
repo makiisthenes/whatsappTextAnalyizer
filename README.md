@@ -12,3 +12,4 @@
     <li> [still in develpment] The type of emoji specifically and how many times.</li>
     <li> The amount of times, user has initiated a conversation first.</li>
     </ul>
+<h2>Setting it up for analyise--></h2>
