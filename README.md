@@ -32,7 +32,6 @@ And then send to an email and obtain the txt file that can be analyised.
 <hr>
 <h4>Exporting Chats using iOS Whatsapp:</h4>
 [External Link To Guide](https://www.imyfone.com/ios-data-recovery/export-whatsapp-chat-from-iphone/)<br>
-[not supported yet]
 <hr>
 
   <h4>Main.py Usuage</h4>
