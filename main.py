@@ -75,7 +75,7 @@ def emoji_search_x(emoji_input):
 	global userb_emoji_list
 	for emoji_namex, emoji_textx in emoji.EMOJI_UNICODE.items():
 		if emoji_textx == emoji_input:
-			print(userb_name + ' sent the emoji '+emoji_namex)
+			# print(userb_name + ' sent the emoji '+emoji_namex)
 			userb_emoji_list.append(emoji_namex)
 	topUsedEmojiX = Counter(userb_emoji_list).most_common(5)
 
@@ -87,7 +87,7 @@ def emoji_search_y(emoji_input):
 	# emoji_text is emoji character that is linked to that emoji_namey.
 	for emoji_namey, emoji_texty in emoji.EMOJI_UNICODE.items():  # here we meed to check the whole dictionary to see if
 		if emoji_texty == emoji_input:
-			print(usera_name + ' sent the emoji '+ emoji.demojize(emoji_input))
+			# print(usera_name + ' sent the emoji '+ emoji.demojize(emoji_input))
 			emoji_name = emoji.demojize(emoji_input)
 			usera_emoji_list.append(emoji_name)
 	topUsedEmojiY = Counter(usera_emoji_list).most_common(5)
