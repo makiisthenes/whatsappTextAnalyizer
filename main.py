@@ -141,9 +141,10 @@ def analyize_txt(textfile):
 
 
 	with open(textfile, encoding="utf8") as openfile:
-		print('''
-			+-------------------------------------Texts-------------------------------------+
-			''')
+		if showText:
+			print('''
+				+-------------------------------------Texts-------------------------------------+
+				''')
 		for line in openfile:
 			hasError = False
 			if line[0] not in numbers:  # date-line verifying.
