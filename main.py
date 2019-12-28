@@ -2,6 +2,16 @@
 
 # C:\Users\Michael\Documents\Coding Projects\Python PROJECTS\Random Python Projects\Trackers Software\Whatsapp Analysis\data\test_total.txt
 
+#  _    _ _           _                            ___              _       _
+# | |  | | |         | |                          / _ \            | |     (_)
+# | |  | | |__   __ _| |_ ___  __ _ _ __  _ __   / /_\ \_ __   __ _| |_   _ _ _______ _ __
+# | |/\| | '_ \ / _` | __/ __|/ _` | '_ \| '_ \  |  _  | '_ \ / _` | | | | | |_  / _ \ '__|
+# \  /\  / | | | (_| | |_\__ \ (_| | |_) | |_) | | | | | | | | (_| | | |_| | |/ /  __/ |
+#  \/  \/|_| |_|\__,_|\__|___/\__,_| .__/| .__/  \_| |_/_| |_|\__,_|_|\__, |_/___\___|_|
+#                                  | |   | |                           __/ |
+#                                  |_|   |_|                          |___/			BY Michael Peres.
+
+
 from emojiNames import emoji_names_x
 from emojiNames import emoji_names_y
 import string
@@ -229,7 +239,8 @@ def analyize_txt(textfile):
 	print('''
 		+----------------------------------------END---------------------------------------+
 		''')
-
+	print('Do you want to save this analysis in an log file? [not supported yet...]')
+	usr_option2 = input('Enter a (Y) to save or (N) to exit:: ')
 	hasCompleted = True
 
 
