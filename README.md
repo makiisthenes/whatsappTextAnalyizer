@@ -13,7 +13,7 @@
     </ul>
     <b>Currently still in deveopment:</b>
     <ul>
-    <li> [still in develpment] The type of emoji specifically and how many times.</li>
+    <li> [UPDATED, now works.] The type of emoji specifically and how many times(beta).</li>
     <li> [still in develpment] The ability to save analysis.log in directory.</li>
     <li> [still in develpment] The time between messages send and averages, mean and standard devations data</li>
     <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts)</li>
