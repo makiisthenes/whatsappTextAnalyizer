@@ -11,14 +11,14 @@
 #                                  | |   | |                           __/ |
 #                                  |_|   |_|                          |___/			BY Michael Peres.
 
-
-from emojiNames import emoji_names_x
-from emojiNames import emoji_names_y
-import string
 import os
 import datetime
 import emoji
 from collections import Counter
+import string
+from time import sleep
+
+
 # import numpy as np
 # import matplotlib.pyplot as plt  # Horizontal bar plot
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
@@ -40,6 +40,7 @@ usera_emoji_list = []
 userb_emoji_list = []
 users = []
 erafer = 0
+hasChosen = False
 
 
 def get_users():
@@ -100,6 +101,22 @@ def analyize_txt(textfile):
 	global t_message
 	global rat
 	global hasCompleted
+	global userb_emoji
+	global usera_emoji
+	global print1
+	global print2
+	global print3
+	global print4
+	global print5
+	global print6
+	global print7
+	global print8
+	global print9
+	global print10
+	global print11
+	global print12
+	global print13
+
 	line = 0
 	date = ''
 	x = 0
@@ -204,12 +221,19 @@ def analyize_txt(textfile):
 	print('--> Overall emoji count: {}'.format(str(emoji_count)))
 	o_emoji = 'Overall emoji count: {}'.format(str(emoji_count))
 	print('--> '+userb_name+' number of emojis send:: '+ str(emoji_count_x)+'.')
+	userb_emoji = '--> '+userb_name+' number of emojis send:: '+ str(emoji_count_x)+'.'
 	print('--> '+usera_name+' number of emojis send:: ' + str(emoji_count_y)+'.')
+	usera_emoji = '--> '+usera_name+' number of emojis send:: ' + str(emoji_count_y)+'.'
 	print('--> The number of images/stickers send on this day is: ' + str(images) + '.')
+	print1 = '--> The number of images/stickers send on this day is: ' + str(images) + '.'
 	print('--> '+usera_name+' sticker/ picture sent:: ' + str(images_y) + ' stickers.')
+	print2 = '--> '+usera_name+' sticker/ picture sent:: ' + str(images_y) + ' stickers.'
 	print('--> '+userb_name+' sticker/ picture sent:: ' + str(images_x) + ' stickers.')
+	print3 = '--> '+userb_name+' sticker/ picture sent:: ' + str(images_x) + ' stickers.'
 	print('--> '+usera_name+' actual message sent:: ' + str(y - images_y)+'.')
+	print4 = '--> '+usera_name+' actual message sent:: ' + str(y - images_y)+'.'
 	print('--> '+userb_name+' actual message sent:: ' + str(x - images_x)+'.')
+	print5 = '--> '+userb_name+' actual message sent:: ' + str(x - images_x)+'.'
 	print('--> Total Messages: ' + str(int(y) + int(x)) + ' messages send on ' + date + '[total].')
 	t_message = 'Total Messages: ' + str(int(y) + int(x)) + ' messages send on ' + date + '[total].'
 	word = int(y) + int(x)
@@ -225,13 +249,21 @@ def analyize_txt(textfile):
 	except ZeroDivisionError:
 		rat_eng_actual = 'ERROR'
 	print('--> Ratio of Actual Engagement: {}% for text messages.'.format(rat_eng_actual))
+	print6 = '--> Ratio of Actual Engagement: {}% for text messages.'.format(rat_eng_actual)
 	print("--> Dates of data used " + str(unqiue_count)+'.')
+	print7 = "--> Dates of data used " + str(unqiue_count)+'.'
 	print("--> No of days of data used:: " + str(len(unqiue_count))+' days.')
+	print8 = "--> No of days of data used:: " + str(len(unqiue_count))+' days.'
 	print('--> Number of times '+userb_name+' has initiated: ' + str(init_x) + ' time(s).')
+	print9 = '--> Number of times '+userb_name+' has initiated: ' + str(init_x) + ' time(s).'
 	print('--> Number of times '+usera_name+' has initiated: ' + str(init_y) + ' time(s).')
+	print10 = '--> Number of times '+usera_name+' has initiated: ' + str(init_y) + ' time(s).'
 	print('--> The users in this conversation is ' + usera_name + ' and ' + userb_name + '.')
+	print11 = '--> The users in this conversation is ' + usera_name + ' and ' + userb_name + '.'
 	print('The top 5 most used emojis by ' + userb_name + ' are ' + str(topUsedEmojiX))
+	print12 = 'The top 5 most used emojis by ' + userb_name + ' are ' + str(topUsedEmojiX)
 	print('The top 5 most used emojis by ' + usera_name + ' are ' + str(topUsedEmojiY))
+	print13 = 'The top 5 most used emojis by ' + usera_name + ' are ' + str(topUsedEmojiY)
 	# print(userb_emoji_list)
 	# print(usera_emoji_list)
 	print('''
@@ -239,9 +271,32 @@ def analyize_txt(textfile):
 	print('''
 		+----------------------------------------END---------------------------------------+
 		''')
-	print('Do you want to save this analysis in an log file? [not supported yet...]')
-	usr_option2 = input('Enter a (Y) to save or (N) to exit:: ')
 	hasCompleted = True
+
+
+def savefile():
+	file_path_save = os.getcwd() + r'\logfile.txt'  # connect a '\logfile.txt' to the directory...
+	with open(file_path_save, 'w') as savefile:
+		savefile.write(str(z_state)+'\n')
+		savefile.write(str(m_state)+'\n')
+		savefile.write(str(o_emoji)+'\n')
+		savefile.write(str(userb_emoji)+'\n')
+		savefile.write(str(usera_emoji)+'\n')
+		savefile.write(str(print1)+'\n')
+		savefile.write(str(print2)+'\n')
+		savefile.write(str(print3)+'\n')
+		savefile.write(str(print4)+'\n')
+		savefile.write(str(print5)+'\n')
+		savefile.write(str(print6)+'\n')
+		savefile.write(str(print7)+'\n')
+		savefile.write(str(print8)+'\n')
+		savefile.write(str(print9)+'\n')
+		savefile.write(str(print10)+'\n')
+		savefile.write(str(print11)+'\n')
+		savefile.write(str(print12)+'\n')
+		savefile.write(str(print13)+'\n')
+	savefile.close()
+	return 'The log file has been created and saved in directory'
 
 
 def list_files():
@@ -285,6 +340,20 @@ while usr_input != 1 and not hasCompleted:
 		try:
 			date_file_labeller()
 			analyize_txt(str(textfile))
+			while not hasChosen:
+				opt2 = input('Do you want a log file of this analysis:: (Y)es or (N)o:: ').upper()
+				if opt2 == 'Y':
+					savefile()
+					print('The log file has been created and saved in directory')
+					sleep(1)
+					hasChosen = True
+				elif opt2 == 'N':
+					print('You have chosen to not save this...')
+					sleep(1)
+					hasChosen = True
+				else:
+					print('Not a valid response...')
+					sleep(0.5)
 			if usr_input == 'HELP':
 				list_files()
 		except FileNotFoundError:
