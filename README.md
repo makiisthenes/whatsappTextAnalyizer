@@ -51,6 +51,7 @@ This will output an analysis statment...<br>
 <h4>Errors</h4>
 If an error has occured its probably to do with the PATH_TO_FILE.<br>
 Make sure that you have copied the whole complete directory path to the export file.<br>
+If the problem still persists I found it useful to run it on Pycharm IDLE...<br>
 <hr>
 <h4>Contact Me and donations</h4>
 To contact me,<br>
