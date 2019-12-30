@@ -24,11 +24,11 @@
     <ul>
     <li>Recognise message time frames.</li>
     <li>Use of Machine Learning Algorithms to determine subject of messages, similar to grammarly.</li>
-    <li>Implementation of spelling checks in messages ~ pyspellchecker 0.5.3</li>
+    <li>Implementation of spelling checks in messages. ~ pyspellchecker 0.5.3</li>
     <li>Average message length, word length and average no of words.</li>
     <li>Determing whether you should initiate conversations more times.</li>
     <li>Determining whether you are sending too many messages.</li>
-    <li>Response time of users from message</li>
+    <li>Response time of users from message.</li>
     </ul>
 <i>This update will focus on timing and type of messages sent from both users.</i><br><hr>
 <h3>Setup</h3>
