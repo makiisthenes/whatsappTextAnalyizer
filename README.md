@@ -11,7 +11,7 @@
     <li> The amount of times, user has initiated a conversation first.</li>
     </ul>
     <hr>
-    <b>Currently still in deveopment:</b>
+    <b>Currently still in development:</b>
     <ul>
     <li> [UPDATED, now works.] The type of emoji specifically and how many times(beta).</li>
     <li> [UPDATED, now works.] The ability to save analysis.log in directory.</li>
