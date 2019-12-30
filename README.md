@@ -32,7 +32,6 @@
     </ul>
 <i>This update will focus on timing and type of messages sent from both users.</i><br><hr>
 <h3>Setup</h3>
-<hr>
 In order to use for the first time, script requires some parameters...<br>
 --> Obtaining the text data for whatsapp chat...<br>
 To obtain the whatsapp text file, you must access this on the mobile application.<br>
