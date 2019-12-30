@@ -18,6 +18,7 @@
     <li> [still in develpment] The time between messages send and averages, mean and standard devations data.</li>
     <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts).</li>
     </ul>
+    <i>The points above are currently being worked on.</i>
     <b>Future updates: --> Update 1.01</b>
     <ul>
     <li>Recognise message time frames.</li>
