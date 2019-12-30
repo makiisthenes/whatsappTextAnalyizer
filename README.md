@@ -60,6 +60,7 @@ CD to directory where <b>whatsappTextAnalyizer is stored<br>
 usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
 and type python main.py FILE_PATH_TO_EXPORT.<br>
 This will output an analysis statment...<br>
+At the end it gives you the option to save this analysis, please be aware it will overwrite previously saved analysis.<br>
 <hr>
 <h4>Errors</h4>
 If an error has occured its probably to do with the PATH_TO_FILE.<br>
