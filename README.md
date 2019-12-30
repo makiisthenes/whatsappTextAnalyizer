@@ -16,7 +16,7 @@
     <li> [UPDATED, now works.] The type of emoji specifically and how many times(beta).</li>
     <li> [UPDATED, now works.] The ability to save analysis.log in directory.</li>
     <li> [still in develpment] The time between messages send and averages, mean and standard devations data.</li>
-    <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts). ~ matplotlib</li>
+    <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts). ~ matplotlib 3.1.2</li>
     </ul>
     <i>The points above are currently being worked on.</i><br>
     <hr>
