@@ -24,7 +24,7 @@
     <ul>
     <li>Recognise message time frames.</li>
     <li>Use of Machine Learning Algorithms to determine subject of messages, similar to grammarly.</li>
-    <li>Implementation of spelling checks in messages</li>
+    <li>Implementation of spelling checks in messages ~ pyspellchecker 0.5.3</li>
     <li>Average message length, word length and average no of words.</li>
     <li>Determing whether you should initiate conversations more times.</li>
     <li>Determining whether you are sending too many messages.</li>
