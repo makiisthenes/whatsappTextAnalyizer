@@ -18,7 +18,7 @@
     <li> [still in develpment] The time between messages send and averages, mean and standard devations data.</li>
     <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts).</li>
     </ul>
-    <i>The points above are currently being worked on.</i>
+    <i>The points above are currently being worked on.</i><br>
     <b>Future updates: --> Update 1.01</b>
     <ul>
     <li>Recognise message time frames.</li>
@@ -29,7 +29,7 @@
     <li>Determining whether you are sending too many messages.</li>
     <li>Response time of users from message</li>
     </ul>
-<i>This update will focus on timing and type of messages sent from both users.</i>
+<i>This update will focus on timing and type of messages sent from both users.</i><br>
 <h3>Setup</h3>
 <hr>
 In order to use for the first time, script requires some parameters...<br>
