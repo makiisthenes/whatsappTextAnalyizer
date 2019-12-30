@@ -11,6 +11,7 @@
     <li> The amount of emojis used by each person.</li>
     <li> The amount of times, user has initiated a conversation first.</li>
     </ul>
+    <hr>
     <b>Currently still in deveopment:</b>
     <ul>
     <li> [UPDATED, now works.] The type of emoji specifically and how many times(beta).</li>
@@ -19,6 +20,7 @@
     <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts).</li>
     </ul>
     <i>The points above are currently being worked on.</i><br>
+    <hr>
     <b>Future updates: --> Update 1.01</b>
     <ul>
     <li>Recognise message time frames.</li>
@@ -29,7 +31,7 @@
     <li>Determining whether you are sending too many messages.</li>
     <li>Response time of users from message</li>
     </ul>
-<i>This update will focus on timing and type of messages sent from both users.</i><br>
+<i>This update will focus on timing and type of messages sent from both users.</i><br><hr>
 <h3>Setup</h3>
 <hr>
 In order to use for the first time, script requires some parameters...<br>
