@@ -18,6 +18,17 @@
     <li> [still in develpment] The time between messages send and averages, mean and standard devations data.</li>
     <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts).</li>
     </ul>
+    <b>Future updates: --> Update 1.01</b>
+    <ul>
+    <li>Recognise message time frames.</li>
+    <li>Use of Machine Learning Algorithms to determine subject of messages, similar to grammarly.</li>
+    <li>Implementation of spelling checks in messages</li>
+    <li>Average message length, word length and average no of words.</li>
+    <li>Determing whether you should initiate conversations more times.</li>
+    <li>Determining whether you are sending too many messages.</li>
+    <li>Response time of users from message</li>
+    </ul>
+<i>This update will focus on timing and type of messages sent from both users.</i>
 <h3>Setup</h3>
 <hr>
 In order to use for the first time, script requires some parameters...<br>
