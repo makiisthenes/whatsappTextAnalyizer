@@ -56,7 +56,7 @@ And then send to an email and obtain the txt file that can be analyised.
 To use, all you have to do is install dependancies found in requirements.txt<br>
 Use "pip install -r requirements.txt" to install dependancies.<br>
 Now from command line,<br>
-CD to directory where <b>whatsappTextAnalyizer is stored<br>
+CD to directory where <b>whatsappTextAnalyizer</b> is stored<br>
 usually found somewhere like "C:\Users\USER\Downloads\whatsappTextAnalyizer-master"<br>
 and type python main.py FILE_PATH_TO_EXPORT.<br>
 This will output an analysis statment...<br>
