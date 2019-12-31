@@ -17,6 +17,7 @@
     <li> [UPDATED, now works.] The ability to save analysis.log in directory.</li>
     <li> [still in develpment] The time between messages send and averages, mean and standard devations data.</li>
     <li> [still in develpment] Graphical Analytical Representation of Chat (graphs and pie charts). ~ matplotlib 3.1.2</li>
+    <li> [still in development] Implementation of spelling checks in messages.</li>
     </ul>
     <i>The points above are currently being worked on.</i><br>
     <hr>
@@ -24,7 +25,6 @@
     <ul>
     <li>Recognise message time frames.</li>
     <li>Use of Machine Learning Algorithms to determine subject of messages, similar to grammarly.</li>
-    <li>Implementation of spelling checks in messages. ~ pyspellchecker 0.5.3</li>
     <li>Average message length, word length and average no of words.</li>
     <li>Determing whether you should initiate conversations more times.</li>
     <li>Determining whether you are sending too many messages.</li>
