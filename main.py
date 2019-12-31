@@ -240,12 +240,12 @@ def analyize_txt(textfile):
 							print(
 								'This message was sent at ' + msg_time)  # want to add time difference before each message...
 							print('	--> ' + line)
-
-					if part_count == 1 isNewline:
+					isNewline = False
+					if part_count == 1 and isNewline:
 						# want to implement line_part_count in this section.
 						# this is where we know the selection of times are in a specific date...
 						pass
-							
+
 
 					if userb in part:
 						x = x + 1
