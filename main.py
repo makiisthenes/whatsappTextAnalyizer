@@ -12,7 +12,6 @@
 #                                  |_|   |_|                          |___/			BY Michael Peres.
 
 import os
-import datetime
 import emoji
 from collections import Counter
 import string
@@ -61,32 +60,40 @@ def eng_analysis(eng_word, user):  # to be continued, will add spell checking, a
 	exit_loop = False
 	len_eng_word = len(eng_word)
 	# we also need a parameter for who this text belongs to.
-	cd_path = os.getcwd() + r'\langAnalysis\savefile'+eng_word[0].upper()+'_PATH.txt'
+	if os.getcwd() == 'C:\\Users\\Michael\\Documents\\Coding Projects\\Python PROJECTS\\Random Python Projects\\Trackers Software\\Whatsapp Analysis':
+		cd_path = os.getcwd() + r'\__main__\langAnalysis\savefile' + eng_word[0].upper() + '_PATH.txt'
+	else:
+		cd_path = os.getcwd() + r'\langAnalysis\savefile'+ eng_word[0].upper()+'_PATH.txt'
 	# this will look at file containing the first letter of this word, to improve speed
 	# finds the directory the script is running from
-	with open(cd_path, encoding="utf8") as eng_file:
-		for eng_word_check in eng_file:
-			if eng_word_check == eng_word:
-				exit_loop = True
-				# meaning the word is in the dictionary and working.
-				pass
-			if not exit_loop:
-				# meaning the word was not found.
-				for eng_word_characters in range(len_eng_word):
-					try:
-						if eng_word[eng_word_characters] == eng_word_check[eng_word_characters]:
+	try:
+		with open(r'C:\Users\Michael\Documents\Coding Projects\Python PROJECTS\Random Python Projects\Trackers Software\Whatsapp Analysis\__main__\langAnalysis\savefileA_PATH.txt', encoding="utf8") as eng_file:
+			for eng_word_check in eng_file:
+				if eng_word_check == eng_word:
+					exit_loop = True
+					# meaning the word is in the dictionary and working.
+					pass
+				if not exit_loop:
+					# meaning the word was not found.
+					for eng_word_characters in range(len_eng_word):
+						try:
+							if eng_word[eng_word_characters] == eng_word_check[eng_word_characters]:
+								pass
+							# go and check the next letter
+							# i want an accuracy of 80% before we tell them the user meant this word.
+							else:
+								pass
+							# skip this word in the dictionary and check the next one...
+						except IndexError:
 							pass
-						# go and check the next letter
-						# i want an accuracy of 80% before we tell them the user meant this word.
-						else:
-							pass
-						# skip this word in the dictionary and check the next one...
-					except IndexError:
-						pass
-					# please look to see if this exception allows analysis
-			if exit_loop:
-				exit_loop = False  # getting out of the for loop.
-				pass
+						# please look to see if this exception allows analysis
+				if exit_loop:
+					exit_loop = False  # getting out of the for loop.
+					pass
+	except OSError:
+		print('error lies in this section of code...')
+		exit()
+
 	# accessing the words one by one, need to find a link...
 	# we want to check whether this word is include in the dictionary or its spelled wrong..
 
@@ -374,10 +381,10 @@ def analyize_txt(textfile):
 	print10 = '--> Number of times ' + usera_name + ' has initiated: ' + str(init_y) + ' time(s).'
 	print('--> The users in this conversation is ' + usera_name + ' and ' + userb_name + '.')
 	print11 = '--> The users in this conversation is ' + usera_name + ' and ' + userb_name + '.'
-	print('The top 5 most used emojis by ' + userb_name + ' are ' + str(topUsedEmojiX))
-	print12 = 'The top 5 most used emojis by ' + userb_name + ' are ' + str(topUsedEmojiX)
-	print('The top 5 most used emojis by ' + usera_name + ' are ' + str(topUsedEmojiY))
-	print13 = 'The top 5 most used emojis by ' + usera_name + ' are ' + str(topUsedEmojiY)
+	print('--> The top 5 most used emojis by ' + userb_name + ' are ' + str(topUsedEmojiX))
+	print12 = '--> The top 5 most used emojis by ' + userb_name + ' are ' + str(topUsedEmojiX)
+	print('--> The top 5 most used emojis by ' + usera_name + ' are ' + str(topUsedEmojiY))
+	print13 = '--> The top 5 most used emojis by ' + usera_name + ' are ' + str(topUsedEmojiY)
 	# print(userb_emoji_list)
 	# print(usera_emoji_list)
 	print('''
@@ -465,12 +472,11 @@ while usr_input != 1 and not hasCompleted:
 				else:
 					print('Not a valid response...')
 					sleep(0.5)
-			if usr_input == 'HELP':
-				list_files()
+			# if usr_input == 'HELP':
+				# list_files()
 		except FileNotFoundError:
-			if usr_input == 'HELP':
-				list_files()
-			else:
-				print('Path was not found, please try again... FileNotFoundError')
+			# if usr_input == 'HELP':
+				# list_files()
+			print('Path was not found, please try again... FileNotFoundError')
 	except OSError:
 		print('Path was not found, please try again... OSError')
