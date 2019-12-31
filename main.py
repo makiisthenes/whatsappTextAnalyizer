@@ -145,8 +145,6 @@ def emoji_search_y(emoji_input):
             emoji_name = emoji.demojize(emoji_input)
             usera_emoji_list.append(emoji_name)
     topUsedEmojiY = Counter(usera_emoji_list).most_common(5)
-
-
 # later give option for seeing x number of top emojis used...
 
 
