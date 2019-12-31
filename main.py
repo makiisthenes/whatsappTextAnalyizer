@@ -145,8 +145,6 @@ def emoji_search_y(emoji_input):
 			emoji_name = emoji.demojize(emoji_input)
 			usera_emoji_list.append(emoji_name)
 	topUsedEmojiY = Counter(usera_emoji_list).most_common(5)
-
-
 # later give option for seeing x number of top emojis used...
 
 
@@ -196,7 +194,6 @@ def analyize_txt(textfile):
 	belongsUserA = False
 	message_contents = []
 	part4checker = False
-
 	with open(textfile, encoding="utf8") as openfile:
 		if showText:
 			print('''
@@ -418,21 +415,12 @@ def savefile():
 
 
 def list_files():
-	for f in os.walk(
-			r'C:\Users\Michael\Documents\Coding Projects\Python PROJECTS\Random Python Projects\Whatsapp Analysis\chat_txt'):
+	for f in os.walk(os.getcwd()):
 		for file in f:
 			if '.txt' in file:
 				files.append(os.path.join(f, file))
 		for names in files:
 			print(names)
-
-
-def date_file_labeller():  # useless function...
-	global textname
-	global dt
-	dt = datetime.datetime.today()
-	textname = str(dt.day) + '-' + str(dt.month) + 'textAnalysis.txt'
-	# print(textname)
 
 
 print('Please be aware selecting (Y) is unstable and may not work...')
@@ -456,14 +444,13 @@ while usr_input != 1 and not hasCompleted:
 	print("To analyse the WhatsApp texts today, continue, else write 'EXIT' to exit program")
 	try:
 		try:
-			date_file_labeller()
-			dev_opt = input('To enable BETA spelling mode, type "ENABLE" or press anything to continue...').upper()
+			dev_opt = input('To enable BETA spelling mode, type "ENABLE" or press anything to continue... [DONT ENABLE]').upper()
 			print('This mode goes through 300 thousand words for each word in the message, takes a long time to complete.')
 			if dev_opt == 'ENABLE':
 				devOption = True
 			else:
 				devOption = False
-			analyize_txt(str(textfile))
+			analyize_txt(textfile)
 			while not hasChosen:
 				opt2 = input('Do you want a log file of this analysis:: (Y)es or (N)o:: ').upper()
 				if opt2 == 'Y':
@@ -484,6 +471,6 @@ while usr_input != 1 and not hasCompleted:
 			if usr_input == 'HELP':
 				list_files()
 			else:
-				print('Path was not found, please try again...')
+				print('Path was not found, please try again... FileNotFoundError')
 	except OSError:
-		print('Path was not found, please try again...')
+		print('Path was not found, please try again... OSError')
