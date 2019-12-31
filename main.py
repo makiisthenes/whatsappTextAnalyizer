@@ -78,10 +78,12 @@ def eng_analysis(eng_word, user):  # to be continued, will add spell checking, a
 					for eng_word_characters in range(len_eng_word):
 						try:
 							if eng_word[eng_word_characters] == eng_word_check[eng_word_characters]:
+								# need to state this word has been found and can be skipped...
 								pass
 							# go and check the next letter
 							# i want an accuracy of 80% before we tell them the user meant this word.
 							else:
+								# need to state that the word was not found and can be classed as a spelling mistake by specific user.
 								pass
 							# skip this word in the dictionary and check the next one...
 						except IndexError:
@@ -238,6 +240,13 @@ def analyize_txt(textfile):
 							print(
 								'This message was sent at ' + msg_time)  # want to add time difference before each message...
 							print('	--> ' + line)
+
+					if part_count == 1 isNewline:
+						# want to implement line_part_count in this section.
+						# this is where we know the selection of times are in a specific date...
+						pass
+							
+
 					if userb in part:
 						x = x + 1
 						userx = True  # serialising this message to belong to this individual.
