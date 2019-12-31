@@ -16,6 +16,8 @@ import emoji
 from collections import Counter
 import string
 from time import sleep
+# Future Updates ~
+# import tkinter
 # import matplotlib
 # import numpy as np
 # import matplotlib.pyplot as plt
@@ -23,7 +25,7 @@ from time import sleep
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 alpha_list = ['-', ':', '/', '.', '?', '!', "'", '"', '^', '(', ')', 'π', ' ', ',', ']', '[', '<', '>', r'\\', '', '  ',
-			  '   ', '    ', '*', '+', '-', '\\']
+'*', '+', '-', '\\']
 for x in string.ascii_uppercase:
 	alpha_list.append(x)
 for x in string.ascii_lowercase:
@@ -179,8 +181,6 @@ def analyize_txt(textfile):
 	global print11
 	global print12
 	global print13
-
-	line = 0
 	date = ''
 	x = 0
 	y = 0
@@ -245,7 +245,6 @@ def analyize_txt(textfile):
 						# want to implement line_part_count in this section.
 						# this is where we know the selection of times are in a specific date...
 						pass
-
 
 					if userb in part:
 						x = x + 1
