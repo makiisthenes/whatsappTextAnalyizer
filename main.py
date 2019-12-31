@@ -10,18 +10,17 @@
 #  \/  \/|_| |_|\__,_|\__|___/\__,_| .__/| .__/  \_| |_/_| |_|\__,_|_|\__, |_/___\___|_|
 #                                  | |   | |                           __/ |
 #                                  |_|   |_|                          |___/			BY Michael Peres.
+
 import os
 import datetime
 import emoji
 from collections import Counter
 import string
 from time import sleep
-
 # import matplotlib
-
-
 # import numpy as np
-# import matplotlib.pyplot as plt  # Horizontal bar plot
+# import matplotlib.pyplot as plt
+
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 alpha_list = ['-', ':', '/', '.', '?', '!', "'", '"', '^', '(', ')', 'π', ' ', ',', ']', '[', '<', '>', r'\\', '', '  ',
