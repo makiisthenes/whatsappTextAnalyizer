@@ -29,6 +29,7 @@
     <li>Determing whether you should initiate conversations more times.</li>
     <li>Determining whether you are sending too many messages.</li>
     <li>Response time of users from message.</li>
+    <li>GUI for program. Using Tkinter.</li>
     </ul>
 <i>This update will focus on timing and type of messages sent from both users.</i><br><hr>
 <h3>Setup</h3>
