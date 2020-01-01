@@ -17,13 +17,19 @@ from collections import Counter
 import string
 from time import sleep
 # Future Updates ~
-# import tkinter
+import tkinter
 # import matplotlib
 # import numpy as np
 # import matplotlib.pyplot as plt
 
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+'''
+top = tkinter.Tk()
+top.title = 'Whatsapp Message'
+# Code to add widgets will go here...
+top.mainloop()
+'''
 
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 alpha_list = ['-', ':', '/', '.', '?', '!', "'", '"', '^', '(', ')', 'π', ' ', ',', ']', '[', '<', '>', r'\\', '', '  ',
 '*', '+', '-', '\\']
 for x in string.ascii_uppercase:
@@ -52,9 +58,15 @@ topUsedEmojiY = None
 # splitting the dictionary by thier letter each in order to increase performance.
 
 
+def msg_time_analysis():
+	pass
+
+
 def eng_analysis(eng_word, user):  # to be continued, will add spell checking, add user parameter.
 	global userx_spelling_mistakecount
 	global usery_spelling_mistakecount
+	userx_spelling_mistakecount = 0
+	usery_spelling_mistakecount = 0
 	if user == 'userx':  # links message to this userx
 		pass
 	if user == 'usery':  # links message to this userx
@@ -79,14 +91,17 @@ def eng_analysis(eng_word, user):  # to be continued, will add spell checking, a
 					# meaning the word was not found.
 					for eng_word_characters in range(len_eng_word):
 						try:
+							hasFound = False
 							if eng_word[eng_word_characters] == eng_word_check[eng_word_characters]:
+								hasFound = True
 								# need to state this word has been found and can be skipped...
 								pass
 							# go and check the next letter
 							# i want an accuracy of 80% before we tell them the user meant this word.
-							else:
+							elif eng_word[eng_word_characters] != eng_word_check[eng_word_characters]:
+								if not hasFound:
+									hasFound = False
 								# need to state that the word was not found and can be classed as a spelling mistake by specific user.
-								pass
 							# skip this word in the dictionary and check the next one...
 						except IndexError:
 							pass
@@ -97,9 +112,13 @@ def eng_analysis(eng_word, user):  # to be continued, will add spell checking, a
 	except OSError:
 		print('error lies in this section of code...')
 		exit()
-
 	# accessing the words one by one, need to find a link...
 	# we want to check whether this word is include in the dictionary or its spelled wrong..
+	# serialisation of this spelling mistakes to individual person.
+	if user == 'userx' and not hasFound:
+		userx_spelling_mistakecount = userx_spelling_mistakecount + 1
+	elif user == 'usery' and not hasFound:
+		usery_spelling_mistakecount = usery_spelling_mistakecount + 1
 
 
 def get_users():
@@ -181,6 +200,12 @@ def analyize_txt(textfile):
 	global print11
 	global print12
 	global print13
+	global msg_timelist
+	global slight_msg_latency
+	global major_msg_latency
+	global crazy_blank_latency
+	global message_date_dic
+	global ontime_msg_count
 	date = ''
 	x = 0
 	y = 0
@@ -202,6 +227,14 @@ def analyize_txt(textfile):
 	belongsUserB = False
 	belongsUserA = False
 	message_contents = []
+
+	msg_timelist = []
+	slight_msg_latency = []  # to do with message timestamp analysis in range 2 mins to 5 mins.
+	major_msg_latency = []  # to do with message timestamp analysis in range 5 mins to 15 mins.
+	crazy_blank_latency = []  # to do with message timestamp analysis in range more than 15 mins.
+	message_date_dic = {}
+	ontime_msg_count = 0
+
 	part4checker = False
 	with open(textfile, encoding="utf8") as openfile:
 		if showText:
@@ -211,7 +244,7 @@ def analyize_txt(textfile):
 		for line in openfile:
 			line_total_part_counter = int(len(line.split())) - 1  # maximum part_count of message...
 			hasError = False
-			if line[0] not in numbers:  # date-line verifying.
+			if line[0] not in numbers or line.split()[3] == 'Messages' and line.split()[11] == 'secured':  # date-line verifying.
 				hasError = True
 			if not hasError:
 				line_part_count = line_part_count + 1
@@ -222,26 +255,68 @@ def analyize_txt(textfile):
 					# print(str(part_count) + ' ' + str(part))
 					# print(line)
 					# print(part)
-					if part_count == 0:  # checking the data of message
+					if part_count == 0:  # checking the data of message, this is the start of the line.
 						userx = False
 						usery = False
 						new_part = part.replace(',', '')
 						date = new_part
-						if date not in unqiue_count:
+						if date not in unqiue_count:  # allows variables to be reset on a new day...
 							unqiue_count.append(date)
-							line_part_count = 0
+							line_part_count = 0  # the number of lines for this specific date. serialization.
+							if len(msg_timelist) != 0:
+								message_date_dic.update({unqiue_count[-2]: msg_timelist})  # added dates and msg times to a list...
+							msg_timelist = []
+							# the msg_timelist is resetted at new date and so analysis can be made for new day..
+							# unless the datestamps are very close a condition needs to be made to allow contination of list.
 							if showText:
 								print('These messages were sent on ' + date + ':')
 					# this will find the unqiue date stamp for this information...
 					# print('part count '+ str(line_part_count))
 					if part_count == 1:
 						msg_time = part  # this is time stamp of message...
+						msg_hour = msg_time[:2]
+						msg_min = msg_time[3:]
+						msg_timelist_index_count = len(msg_timelist)
+						if len(msg_timelist) == 0:
+							msg_timelist_index_count = 0
+						elif len(msg_timelist) > 0:
+							msg_timelist_index_count = msg_timelist_index_count - 1
+						msg_timelist.append(msg_time)
+
+						if len(msg_timelist) >= 2 and line_part_count >= 1:  # introduction to timestamp for this date.
+							last_msg_min = msg_timelist[msg_timelist_index_count][3:]  # this will show last known timestamp minute.
+							last_msg_hr = msg_timelist[msg_timelist_index_count][:2]  # this will show last known timestamp hour.
+							ndlast_msg_min = msg_timelist[msg_timelist_index_count - 1][3:]  # this will show 2nd last known timestamp minute.
+							ndlast_msg_hr = msg_timelist[msg_timelist_index_count - 1][:2]  # this will show 2nd last known timestamp hour.
+							if int(last_msg_hr) - int(ndlast_msg_hr) == 0:  # to make sure messages are sent in the same hour.
+								if int(last_msg_min) - int(ndlast_msg_min) <= 2:
+									ontime_msg_count = ontime_msg_count + 1
+								elif 2 < int(last_msg_min) - int(ndlast_msg_min) <= 5:
+									slight_msg_latency.append(line)
+								elif 5 < int(last_msg_min) - int(ndlast_msg_min) <= 15:
+									major_msg_latency.append(line)
+								elif int(last_msg_min) - int(ndlast_msg_min) > 15:
+									crazy_blank_latency.append(line)
+							elif int(last_msg_hr) - int(ndlast_msg_hr) >= 1:  # when message difference is more than an hour.
+								for init_checker in line.split():  # we are stating that its a new conversation in the same day.
+									if userb in init_checker:
+										init_x = init_x + 1
+									elif usera in init_checker:
+										init_y = init_y + 1
+							# this means there is more than two timestamps and can be analysed.
+							# look into actual line count to serialise line with person.
+							# the condition will be, if current line is the last line of day,
+							# by checking if major difference with date, this can also tweak init_x/y variables.
+							# this will analysis the message if it has
+							# Now I want to make it realise from each line if there is a major time difference and highlight the comment.
+							# but also understand when its a new day that this msg time is ignored, and reset.
+							pass
 						if showText:
 							print(
 								'This message was sent at ' + msg_time)  # want to add time difference before each message...
 							print('	--> ' + line)
 					isNewline = False
-					if part_count == 1 and isNewline:
+					if part_count == 1 and isNewline:  # not a good idea... different condition required.
 						# want to implement line_part_count in this section.
 						# this is where we know the selection of times are in a specific date...
 						pass
@@ -398,6 +473,9 @@ def analyize_txt(textfile):
 	print('''
 	
 	''')
+	print('TESTING DEVEOLPER MODE')
+	print(message_date_dic)
+	print('Amount of messages on time: '+str(ontime_msg_count))
 	print('''
 	+----------------------------------------END---------------------------------------+
 	''')
