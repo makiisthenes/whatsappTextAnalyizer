@@ -30,6 +30,9 @@
     <li>Determining whether you are sending too many messages.</li>
     <li>Response time of users from message.</li>
     <li>GUI for program. Using Tkinter.</li>
+    <li>Real Time Analysis, of chats. [really hard]</li>
+    <li>Reminders for chats and time keeping.</li>
+    <li>Significant Dates Reminders, i.e. Fathers, Mothers and Valentine's Day.</li>
     </ul>
 <i>This update will focus on timing and type of messages sent from both users.</i><br><hr>
 <h3>Setup</h3>
