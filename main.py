@@ -200,6 +200,16 @@ def analyize_txt(textfile):
 	global print11
 	global print12
 	global print13
+	global print14
+	global print15
+	global print16
+	global print17
+	global print18
+	global print19
+	global print20
+	global print21
+	global print22
+	global print23
 	global msg_timelist
 	global slight_msg_latency
 	global major_msg_latency
@@ -505,14 +515,30 @@ def analyize_txt(textfile):
 	''')
 	print('TESTING DEVEOLPER MODE')
 	print(message_date_dic)
-	print('Amount of messages on time: '+str(ontime_msg_count))
-	print(usera_name.title()+ ' has blanked messages slightly: ' + str(slight_msg_latency_y) + ' times.')
-	print(userb_name.title() + ' has blanked messages slightly: ' + str(slight_msg_latency_x) + ' times.')
-	print(usera_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_y) + ' times.')
-	print(userb_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_x) + ' times.')
-	print(usera_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_y) + ' times.')
-	print(userb_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_x) + ' times.')
-	print('Rough estimate of time spent actual texting between, '+usera_name+' and '+userb_name+': '+ str(ontime_msg_count/60) + ' hours.'+ ' But actual value is slightly higher.')
+	print('--> Amount of messages sent on time: '+str(ontime_msg_count))
+	print14 = '--> Amount of messages sent on time: '+str(ontime_msg_count)
+	print('--> '+usera_name.title()+ ' has blanked messages slightly: ' + str(slight_msg_latency_y) + ' times.')
+	print15 = '--> '+usera_name.title()+ ' has blanked messages slightly: ' + str(slight_msg_latency_y) + ' times.'
+	print('--> '+userb_name.title() + ' has blanked messages slightly: ' + str(slight_msg_latency_x) + ' times.')
+	print16 = '--> '+userb_name.title() + ' has blanked messages slightly: ' + str(slight_msg_latency_x) + ' times.'
+	print('--> '+usera_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_y) + ' times.')
+	print17 = '--> '+usera_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_y) + ' times.'
+	print('--> '+userb_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_x) + ' times.')
+	print18 = '--> '+userb_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_x) + ' times.'
+	print('--> '+usera_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_y) + ' times.')
+	print19 = '--> '+usera_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_y) + ' times.'
+	print('--> '+userb_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_x) + ' times.')
+	print20 = '--> '+userb_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_x) + ' times.'
+	total_latency_x = int(slight_msg_latency_x) + int(major_msg_latency_x) + int(crazy_blank_latency_x)
+	total_latency_y = int(slight_msg_latency_y) + int(major_msg_latency_y) + int(crazy_blank_latency_y)
+	percentage_latency_x = total_latency_x / x * 100
+	percentage_latency_y = total_latency_y / y * 100
+	print('--> Overall, ' + userb_name + ' has blanked a total of ' + str(percentage_latency_x) + '% of all messages.')
+	print22 = '--> Overall, ' + userb_name + ' has blanked a total of ' + str(percentage_latency_x) + '% of all messages.'
+	print('--> Overall, ' + usera_name + ' has blanked a total of ' + str(percentage_latency_y) + '% of all messages.')
+	print23 = '--> Overall, ' + usera_name + ' has blanked a total of ' + str(percentage_latency_y) + '% of all messages.'
+	print('--> Rough estimate of time spent actual texting between, '+usera_name+' and '+userb_name+': '+ str(ontime_msg_count/60) + ' hours.' + ' But actual value is slightly higher.')
+	print21 = '--> Rough estimate of time spent actual texting between, '+usera_name+' and '+userb_name+': '+ str(ontime_msg_count/60) + ' hours.' + ' But actual value is slightly higher.'
 	print('''
 	+----------------------------------------END---------------------------------------+
 	''')
@@ -540,6 +566,16 @@ def savefile():
 		savefile.write(str(print11) + '\n')
 		savefile.write(str(print12) + '\n')
 		savefile.write(str(print13) + '\n')
+		savefile.write(str(print14) + '\n')
+		savefile.write(str(print15) + '\n')
+		savefile.write(str(print16) + '\n')
+		savefile.write(str(print17) + '\n')
+		savefile.write(str(print18) + '\n')
+		savefile.write(str(print19) + '\n')
+		savefile.write(str(print20) + '\n')
+		savefile.write(str(print21) + '\n')
+		savefile.write(str(print22) + '\n')
+		savefile.write(str(print23) + '\n')
 	savefile.close()
 	return 'The log file has been created and saved in directory'
 
