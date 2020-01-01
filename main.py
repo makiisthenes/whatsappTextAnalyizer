@@ -206,6 +206,13 @@ def analyize_txt(textfile):
 	global crazy_blank_latency
 	global message_date_dic
 	global ontime_msg_count
+	global slight_msg_latency_x  # user b
+	global slight_msg_latency_y  # user a
+	global major_msg_latency_x  # user b
+	global major_msg_latency_y  # user a
+	global crazy_blank_latency_x  # user b
+	global crazy_blank_latency_y  # user a
+
 	date = ''
 	x = 0
 	y = 0
@@ -222,6 +229,14 @@ def analyize_txt(textfile):
 	# day_line_count = 0
 	init_x = 0
 	init_y = 0
+
+	slight_msg_latency_x = 0
+	slight_msg_latency_y = 0
+	major_msg_latency_x = 0
+	major_msg_latency_y = 0
+	crazy_blank_latency_x = 0
+	crazy_blank_latency_y = 0
+
 	user1EmojiCount = {}
 	user2EmojiCount = {}
 	belongsUserB = False
@@ -293,10 +308,25 @@ def analyize_txt(textfile):
 									ontime_msg_count = ontime_msg_count + 1
 								elif 2 < int(last_msg_min) - int(ndlast_msg_min) <= 5:
 									slight_msg_latency.append(line)
+									for init_checker in line.split():
+										if userb in init_checker:
+											slight_msg_latency_x = slight_msg_latency_x + 1
+										elif usera in init_checker:
+											slight_msg_latency_y = slight_msg_latency_y + 1
 								elif 5 < int(last_msg_min) - int(ndlast_msg_min) <= 15:
 									major_msg_latency.append(line)
+									for init_checker in line.split():
+										if userb in init_checker:
+											major_msg_latency_x = major_msg_latency_x + 1
+										elif usera in init_checker:
+											major_msg_latency_y = major_msg_latency_y + 1
 								elif int(last_msg_min) - int(ndlast_msg_min) > 15:
 									crazy_blank_latency.append(line)
+									for init_checker in line.split():
+										if userb in init_checker:
+											crazy_blank_latency_x = crazy_blank_latency_x + 1
+										elif usera in init_checker:
+											crazy_blank_latency_y = crazy_blank_latency_y + 1
 							elif int(last_msg_hr) - int(ndlast_msg_hr) >= 1:  # when message difference is more than an hour.
 								for init_checker in line.split():  # we are stating that its a new conversation in the same day.
 									if userb in init_checker:
@@ -476,6 +506,12 @@ def analyize_txt(textfile):
 	print('TESTING DEVEOLPER MODE')
 	print(message_date_dic)
 	print('Amount of messages on time: '+str(ontime_msg_count))
+	print(usera_name.title()+ ' has blanked messages slightly: ' + str(slight_msg_latency_y) + ' times.')
+	print(userb_name.title() + ' has blanked messages slightly: ' + str(slight_msg_latency_x) + ' times.')
+	print(usera_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_y) + ' times.')
+	print(userb_name.title() + ' has blanked messages majorly: ' + str(major_msg_latency_x) + ' times.')
+	print(usera_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_y) + ' times.')
+	print(userb_name.title() + ' has blanked messages crazy: ' + str(crazy_blank_latency_x) + ' times.')
 	print('Rough estimate of time spent actual texting between, '+usera_name+' and '+userb_name+': '+ str(ontime_msg_count/60) + ' hours.'+ ' But actual value is slightly higher.')
 	print('''
 	+----------------------------------------END---------------------------------------+
