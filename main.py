@@ -476,6 +476,7 @@ def analyize_txt(textfile):
 	print('TESTING DEVEOLPER MODE')
 	print(message_date_dic)
 	print('Amount of messages on time: '+str(ontime_msg_count))
+	print('Rough estimate of time spent actual texting between, '+usera_name+' and '+userb_name+': '+ str(ontime_msg_count/60) + ' hours.'+ ' But actual value is slightly higher.')
 	print('''
 	+----------------------------------------END---------------------------------------+
 	''')
